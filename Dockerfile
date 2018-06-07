@@ -77,8 +77,8 @@ RUN mkdir -p /var/lock/apache2 /var/run/apache2 /var/log/apache2 /var/www/html \
 ## Install libdb4.6 from lucid
 RUN mkdir -p /tmp/install/ \
     && cd /tmp/install \
-    && wget http://de.archive.ubuntu.com/ubuntu/pool/universe/d/db4.6/libdb4.6_4.6.21-16_amd64.deb \
-    && wget http://de.archive.ubuntu.com/ubuntu/pool/universe/d/db4.6/libdb4.6-dev_4.6.21-16_amd64.deb \
+    && wget http://old-releases.ubuntu.com/ubuntu/pool/universe/d/db4.6/libdb4.6_4.6.21-16_amd64.deb \
+    && wget http://old-releases.ubuntu.com/ubuntu/pool/universe/d/db4.6/libdb4.6-dev_4.6.21-16_amd64.deb \
     && echo "2f03a50d72f66d6c6ac976cb0ff1131a  libdb4.6-dev_4.6.21-16_amd64.deb" > md5sums \
     && md5sum -c md5sums \
     && dpkg -i libdb4.6-dev_4.6.21-16_amd64.deb \
